@@ -1,0 +1,20 @@
+<div class="buildingWrapper">
+    <div class="buttonToBuildDir" ng-click="changeView('buildingDirectory')">
+        <div class="innerText">
+            <span class="touchHere">TOUCH HERE</span><span class="FOR">FOR</span><span class="neighBuild">BUILDING</span><span class="guideDir"> DIRECTORY</span>
+        </div>
+    </div>
+    <div class="neighborBottom">
+        <input type="text"  ng-autocomplete ng-model="autocomplete" options="options" details="details"/>
+        {{details.geometry.location.lat()}}
+
+        <google-map center="map.center" zoom="map.zoom" options="map.options" draggable="true">
+            <marker icon="'img/blue_marker.png'" coords="homemarker"></marker>
+        </google-map>
+
+    </div>
+
+
+
+
+</div>

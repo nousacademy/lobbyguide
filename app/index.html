@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Front Kiosk</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/app.css"/>
+
+
+</head>
+<body ng-app="kioskApp">
+
+
+    <div class="mainWrapper" ng-controller="SwitchEm">
+        <div ng-switch on="currentURL" class="leftDiv">
+            <div class="switchClass" ng-switch-when="touchDirectory">
+                <div class="includeClass" ng-include="urls[currentURL]">
+                </div>
+            </div> 
+
+            <div class="switchClass" ng-switch-when="buildingDirectory">
+                <div class="includeClass" ng-include="urls[currentURL]">
+                </div>
+            </div>
+            <div ng-controller="MapCtrl" class="switchClass" ng-switch-when="neighborhoodGuide">
+
+                <input type="text"  ng-autocomplete ng-model="autocomplete" options="options" details="details"/>
+                {{details.geometry.location.lat()}}
+                <button ng-click="calcRoute()">Take me there!</button>
+                <google-map center="map.center" zoom="map.zoom" options="map.options" draggable="true">
+                    <marker icon="'img/blue_marker.png'" coords="homemarker"></marker>
+                </google-map>
+                
+            </div>
+
+            <div class="rightDiv">{{url[currentUR]}}
+                <img src="img/rocky.png">
+            </div>
+            <div class="footerWrapper">
+                <img src="img/footer.png">
+            </div>
+        </div>
+
+        <script src="lib/jquery-2.1.1.min.js"></script>
+        <script src="lib/angular.js"></script>
+        <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAqLx4skhsKnyzazGRCShKgYcmnqmmppGE&sensor=true&libraries=places'></script>  
+        <script src='lib/underscore.js'></script> 
+        <script src='lib/angular-google-maps.js'></script>
+        <script src='lib/ngAutocomplete.js'></script>
+        <script src="lib/angular-route.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/directives.js"></script>
+</body>
+</html>

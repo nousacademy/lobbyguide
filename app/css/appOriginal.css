@@ -1,0 +1,418 @@
+@font-face{
+    font-family: PolyflecBl;
+    src:url("Fonts/Polyflec Bl.ttf");
+}
+
+@font-face{
+    font-family: PolyflecLt;
+    src:url(" Fonts/Polyflec Lt.ttf");
+}
+
+@font-face{
+    font-family: PolyflecRg;
+    src:local("../Fonts/PolyflecRg.ttf"), url("../Fonts/PolyflecRg.ttf");
+}
+
+@font-face{
+    font-family: PolyflecRgBold;
+    src:local("../Fonts/PolyflecRgBold.ttf"), url("../Fonts/PolyflecRgBold.ttf");
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding: 0;
+}
+
+p{
+    margin: -2px;
+    padding: 0;
+}
+
+.mainWrapper{
+    /*max-width: 1920px; */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51,51,51);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    max-width: 1920px;
+    max-height: 1080px;
+    position: relative;
+}
+
+.leftDiv{
+    /*
+    float: left;
+    */
+    display: inline-block;
+    /*width: 950px;*/
+    width: 49.5%;
+    height: 933px;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(77,77,77);
+    position: absolute;
+    left:0;
+}
+/*
+.middleGutter{
+    width:1.05%;
+    background-color: rgb(51,51,51);
+    height: 100%;
+    display: inline-block;
+}
+*/
+.rightDiv{
+    float: right;
+    display: inline-block;
+    /*width: 950px;*/
+    width: 49.5%;
+    height: 933px;
+    margin: 0;
+    padding: 0;
+    color:white;
+    background-color: black;
+    position: absolute;
+    right: 0;
+}
+.rightDiv>img{
+    display: block;
+    /*width:50%; */
+    height: 100%;
+    margin: 0 auto;
+}
+.footerWrapper{
+    /*clear: both; */
+    /*height: 147px;*/
+    /*height:20% */
+    min-width: 100%;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    /*background-color: green; */
+    /*background: url(../img/footer.png); */
+    position: absolute;
+    bottom: 0;
+}
+/*touchDirectory css*/
+
+.switchClass, .includeClass{
+    height:100%;
+    width: 100%;
+}
+
+/*touch directory page*/
+.touchLeft{
+    /*float:left;*/
+    width: 24%;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left:0;
+}
+.touchLeft>img{
+   /* max-height:100%;*/
+    max-height:933px;
+}
+
+.divButtons{
+    width: 76%;
+    /*width: 100%; */
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+.directoryHeader{
+    /*min-width:100%; */
+    height: auto;
+    /*border: 1px solid; */
+    position: absolute;
+    top: 6.5%;
+    left:30%;
+
+}
+
+.buildingButton{
+/*min-width:100%; */
+height: auto;
+position: absolute;
+top:27%;
+right: -8px;
+}
+
+.hoodButton{
+/*min-width:100%; */
+width: 76%;
+height: auto;
+position: absolute;
+top:61%;
+left: -8px;
+}
+
+/* building directory page*/
+
+.buildingWrapper{
+    width:95%;
+    height:100%;
+    margin: 0 auto;
+    background-color: rgb(128,128,128);
+}
+
+.buildingWrapper > p{
+    font-size: 2em;
+    color: rgb(204,204,204);
+}
+
+.buildingTop, .neighborBottom{
+    background-color: rgb(51,51,51);
+    height:87.5%;
+    width:100%;
+    font-family: "Trebuchet MS"
+}
+
+.buildingTop{
+    box-shadow: 1px 5px 25px #000;
+}
+.neighborBottom{
+    box-shadow: 1px -5px 25px #000;
+}
+.buttonToHood,.buttonToBuildDir{
+    height:12.5%;
+    font-family: "Trebuchet MS"
+}
+
+.innerText{
+    height: 100%;
+    width:100%;
+    margin: auto 5%;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+    padding: 2% 0 0% 0;
+}
+.inlineIt{
+    display: inline-block;
+}
+
+.touchHere{
+    color: rgb(77,77,77);
+    font-size: 30px;
+    vertical-align: middle;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.FOR{
+    color: rgb(77,77,77);
+    font-size: 20px;
+    vertical-align: middle;
+    margin: 5%;
+}
+
+.neighBuild{
+    color: rgb(204,204,204);
+    font-size: 55px;
+    vertical-align: middle;
+}
+
+.guideDir{
+    color: rgb(179,179,179);
+    font-size: 55px;
+    vertical-align: middle;
+}
+.pHeader{
+    color: rgb(204,204,204);
+    font-size: 72px;
+    padding: 12px 3%;
+    font-weight: bold;
+}
+
+.pHeaderUnderline{
+    color:rgb(112,194,113);
+    font-size: 59px;
+    padding:0;
+    margin:0;
+    position: absolute;
+    left: 62px;
+    top: 4%;
+}
+.browseBy{
+    font-family: "PolyflecRgBold";
+    /*font-weight: bold; */
+    font-size: 31px;
+    color: rgb(179,179,179);
+    padding: 0 0 0 3%;
+}
+.searchField{
+    background: url(../img/mGlass.png) no-repeat;
+    background-size: 10% 90%;
+    background-position: 2% 40%;
+    background-color: rgb(230,230,230);
+    border-radius: 50px;
+    padding: 0px 0px 0px 45px;
+    margin: 14px 3%;
+    width: 42%;
+    height: 1.3em;
+    outline:  none;
+    font-size: 32px;
+    color: #333;
+}
+.orSpan{
+    font-size:20px;
+}
+.greenBorder{
+    border-radius: 9px;
+    border: solid 1px rgb(230,230,230);
+    background-color: rgb(0,106,4);
+    font-size: 20px;
+    vertical-align: middle;
+    padding: 5px 4px 3px 4px;
+    margin: 1px;
+}
+.listHeader{
+    font-size: 30px;
+    color:rgb(200,200,200);
+}
+
+.listing{
+    font-size:26px;
+    color: rgb(179,179,179);
+    height: 71%;
+    padding:  0;
+    margin:  0;
+}
+.listing ul{
+    padding: 0 0 0 3%;
+    margin: 0;
+    height: 100%;
+}
+
+.listing ul li{
+    list-style-type: none; 
+}
+
+.listing ul li span{
+    display: inline-block;
+}
+.listingOutput{
+    overflow: scroll; /*scroll*/
+    height: 96%;
+    padding:  0;
+    margin:  1% 0 0 0;
+
+}
+/*
+.listingOutput ul{
+    padding: 0 0 0 3%;
+}
+.listingOutput ul li{
+    list-style-type: none; 
+}
+*/
+.listingOutput ul li:nth-child(even){
+    background-color:rgba(128,128,128,0.4);
+    color: rgb(36,36,36);
+}
+.listingOutput ul li span{
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+    display:none;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: rgb(112,194,113);
+}
+
+.cNameLeft{
+    text-align: left;
+    width: 67%;
+}
+
+.floorCenterComp{
+    text-align: center;
+    width: 4%;
+    font-size:24px;
+}
+
+.suiteRight{
+    text-align: right;
+    width:24%;
+}
+
+.indNameLeft{
+    text-align: left;
+    width: 40%;
+}
+.floorCenterInd{
+    text-align: center;
+    width: 4%;
+    font-size:24px;
+}
+
+.compRight{
+    text-align: right;
+    width:50%;
+}
+
+.leftInfo{
+    height: 87.5%;
+    width:79.5%;
+    display: inline-block;
+    position:absolute;
+    top:0;
+    padding: 0 0% 0 4%;
+}
+
+.rightAlpha{
+    /*height:100%;*/
+    width:16.5%;
+    display: inline-block;
+    color: rgb(179,179,179);
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1% 0 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.rightAlpha>a{
+    display:block;
+    margin: 1px auto;
+    /* background-color: black; */
+    padding: 0px 0px;
+    width: 28px;
+    color: rgb(204,204,204);
+}
+.sideGreen{
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: rgb(112,194,113);
+}
+
+/*neighborhood map section */
+
+#map {
+  height: 100%;
+  margin: 0;
+}
+
+#autocomplete {
+  width: 100%;
+  height: 25px;
+}
