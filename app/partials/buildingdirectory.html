@@ -6,11 +6,11 @@
 			</p>
                         <p class="pHeaderUnderline">_______________________</p>
 			<p class="browseBy">
-                            BROWSE BY <span ng-class="{'greenBorder': byCompName}" ng-click="sortSet()" >COMPANY NAME</span> 
+                            BROWSE BY <span ng-class="{'greenBorder': !byCompName}" ng-click="sortSet()" >COMPANY NAME</span> 
                             <span class="orSpan">OR</span> 
-                            <span ng-class="{'greenBorder': !byCompName}" ng-click="sortSet()">INDIVIDUAL</span>
+                            <span ng-class="{'greenBorder': byCompName}" ng-click="sortSet()">INDIVIDUAL</span>
 			</p>
-			<input class="searchField" type="search" ng-model="searching.searchIt">
+			<input class="searchField" type="search" ng-model="searching.searchIt" autofocus>
 
                         <div class="listing" ng-if="byCompName">
                             <div class="listHeader">
@@ -24,7 +24,8 @@
                             </div>
                             <div class="listingOutput">
                                 <ul>
-                                    <li ng-repeat="comp in companies | orderBy:ordering | filter: searching.searchIt">
+                                    <!--<li ng-repeat="comp in companies | orderBy:ordering | filter: searching.searchIt"> -->
+                                    <li class="searchAnimation" ng-repeat="comp in companies | orderBy:ordering | filter: filterByLetter(letter) | filter: searching.searchIt">
                                                 <!--| filter: filterByLetter(letter)"> -->
                                         <span class="cNameLeft">{{comp.cname}}</span>  
                                         <span class="floorCenterComp">{{comp.floor}}</span>
@@ -45,7 +46,8 @@
                             </div>
                             <div class="listingOutput">
                                 <ul>
-                                    <li ng-repeat="indiv in individuals | orderBy:ordering | filter: searching.searchIt | filter: filterByLetter(letter)">
+                                    <!--<li ng-repeat="indiv in individuals | orderBy:ordering | filter: searching.searchIt"> -->
+                                    <li ng-repeat="indiv in individuals | orderBy:ordering | filter: filterByLetter(letter) | filter: searching.searchIt">
                                         <span class="indNameLeft">{{indiv.name}}</span>
                                         <span class="floorCenterInd">{{indiv.floor}}</span>
                                         <span class="compRight">{{indiv.cname}}</span>

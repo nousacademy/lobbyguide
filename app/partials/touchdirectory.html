@@ -7,9 +7,9 @@
 	-->
 		<img class="directoryHeader" src="img/directory.png">
 
-		<img class="buildingButton" src="img/building.png" ng-click="changeView('buildingDirectory')">
+		<img class="buildingButton" src="img/building.png" ng-show="divHideRight" ng-click="changeView('buildingDirectory')">
 	<!--
 	</div>
 	-->
-	<img class="hoodButton" src="img/hood.png" ng-click="changeView('neighborhoodGuide')">
+	<img class="hoodButton" src="img/hood.png" ng-show="divHideLeft" ng-click="changeView('neighborhoodGuide')">
 </div>

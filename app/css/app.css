@@ -17,7 +17,6 @@
     font-family: PolyflecRgBold;
     src:local("../Fonts/PolyflecRgBold.ttf"), url("../Fonts/PolyflecRgBold.ttf");
 }
-
 html,body{
     width:100%;
     height:100%;
@@ -114,7 +113,7 @@ p{
     left:0;
 }
 .touchLeft>img{
-   /* max-height:100%;*/
+    /* max-height:100%;*/
     max-height:933px;
 }
 
@@ -137,29 +136,30 @@ p{
 }
 
 .buildingButton{
-/*min-width:100%; */
-height: auto;
-position: absolute;
-top:27%;
-right: -8px;
+    /*min-width:100%; */
+    height: auto;
+    position: absolute;
+    top:27%;
+    right: -8px;
 }
 
 .hoodButton{
-/*min-width:100%; */
-width: 76%;
-height: auto;
-position: absolute;
-top:61%;
-left: -8px;
+    /*min-width:100%; */
+    width: 76%;
+    height: auto;
+    position: absolute;
+    top:61%;
+    left: -8px;
 }
 
 /* building directory page*/
 
 .buildingWrapper{
-    width:95%;
-    height:100%;
+    width: 95%;
+    height: 96%;
     margin: 0 auto;
-    background-color: rgb(128,128,128);
+    /*background-color: rgb(128,128,128); */
+    background-color: rgb(112,194,113);
 }
 
 .buildingWrapper > p{
@@ -169,19 +169,20 @@ left: -8px;
 
 .buildingTop, .neighborBottom{
     background-color: rgb(51,51,51);
-    height:87.5%;
+    height: 784px;
     width:100%;
-    font-family: "Trebuchet MS"
+    font-family: "Trebuchet MS";
+    position: relative;
 }
 
 .buildingTop{
     box-shadow: 1px 5px 25px #000;
 }
 .neighborBottom{
-    box-shadow: 1px -5px 25px #000;
+    box-shadow: 0px 0px 25px #000;
 }
 .buttonToHood,.buttonToBuildDir{
-    height:12.5%;
+    height: 116px;
     font-family: "Trebuchet MS"
 }
 
@@ -193,40 +194,45 @@ left: -8px;
     font-family: "Trebuchet MS";
     padding: 2% 0 0% 0;
 }
+
+.innerText{
+    text-shadow: 1px 1px 4px #222;
+}
 .inlineIt{
     display: inline-block;
 }
 
 .touchHere{
-    color: rgb(77,77,77);
+    color: rgb(255, 255, 255);
     font-size: 30px;
     vertical-align: middle;
     width: 100px;
     display: inline-block;
     text-align: center;
+    margin-left: 25px;
 }
 
 .FOR{
-    color: rgb(77,77,77);
+    color: rgb(255, 255, 255);
     font-size: 20px;
     vertical-align: middle;
-    margin: 5%;
+    margin: 3%;
 }
 
 .neighBuild{
-    color: rgb(204,204,204);
+    color: rgb(255, 255, 255);
     font-size: 55px;
     vertical-align: middle;
 }
 
 .guideDir{
-    color: rgb(179,179,179);
+    color: rgb(255, 255, 255);
     font-size: 55px;
     vertical-align: middle;
 }
 .pHeader{
     color: rgb(204,204,204);
-    font-size: 72px;
+    font-size: 70px;
     padding: 12px 3%;
     font-weight: bold;
 }
@@ -237,7 +243,7 @@ left: -8px;
     padding:0;
     margin:0;
     position: absolute;
-    left: 62px;
+    left: 47px;
     top: 4%;
 }
 .browseBy{
@@ -279,9 +285,9 @@ left: -8px;
 }
 
 .listing{
-    font-size:26px;
+    font-size: 26px;
     color: rgb(179,179,179);
-    height: 71%;
+    height: 78%;
     padding:  0;
     margin:  0;
 }
@@ -331,7 +337,7 @@ left: -8px;
 .listingOutput::-webkit-scrollbar-track {
     border-radius: 10px;
 }
- 
+
 .listingOutput::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
@@ -371,24 +377,24 @@ left: -8px;
 
 .leftInfo{
     height: 87.5%;
-    width:79.5%;
+    width: 83%;
     display: inline-block;
     position:absolute;
     top:0;
-    padding: 0 0% 0 4%;
+    padding: 0 0% 0 2%;
 }
 
 .rightAlpha{
-    /*height:100%;*/
-    width:16.5%;
+    /* height: 90%; */
+    width: 16.5%;
     display: inline-block;
     color: rgb(179,179,179);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
     padding: 1% 0 0 0;
     position: absolute;
-    top: 0;
+    top: 13px;
     right: 0;
 }
 .rightAlpha>a{
@@ -396,30 +402,41 @@ left: -8px;
     margin: 1px auto;
     /* background-color: black; */
     padding: 0px 0px;
-    width: 28px;
+    width: 38px;
     color: rgb(204,204,204);
 }
 .sideGreen{
-    border-left: 2px solid;
-    border-right: 2px solid;
+    border-left: 3px solid;
+    border-right: 3px solid;
     border-color: rgb(112,194,113);
 }
 
 /*neighborhood map section */
+.neighborWrapper{
+    width: 903px;
+    height: 96%;
+    margin: 0 auto;
+    /*background-color: rgb(128,128,128); */
+    background-color: rgb(112,194,113);
+}
 
+.neighborWrapper > p{
+    font-size: 2em;
+    color: rgb(204,204,204);
+}
 #map {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 #autocomplete {
-  width: 100%;
-  height: 25px;
+    width: 100%;
+    height: 25px;
 }
 
 .angular-google-map-container {
     width: 100%;
-    height: 600px;
+    height: 783px;
 }
 
 /* fix for Twitter Bootstrap handling of responsive images */
@@ -429,7 +446,7 @@ left: -8px;
 
 .angular-google-map {
     top: 80px;
-
+    height: 100%;
 }
 
 .shrink {
@@ -456,9 +473,6 @@ left: -8px;
     white-space: nowrap;
 }
 
-.angular-google-map-container { 
-    height: 400px; 
-}
 
 .custom-info-window{
     background: rgba(0,0,0,0.5);
@@ -490,5 +504,338 @@ left: -8px;
 }
 
 input {
+    width: 90%;
+}
+
+.radios{
+    display: inline-block;
+}
+label input{
+    display: inline-block;
+    color: white;
+}
+
+.startMarker{
+    display:none;
+}
+
+.goggleInput{
+    width: 58%;
+    display:inline-block;
+    font-size: 20px;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.userInput{
+    position:absolute;
+    z-index:  200;
+    left: 12%;
+    width: 70%;
+    top: 19px;
+    height: 40px;
+}
+.radio-toolbar{
+    display: inline-block;
+    position: absolute;
+    left: 64%;
+    width: 34%;
+}
+.radio-toolbar input[type="radio"] {
+    display:none; 
+}
+
+.radio-toolbar label ,#emailme, #resetme, .returnHome{
+    opacity: 0.8;
+    border: 1px solid rgba(0,0,0,0.5);
+    background-color:#fff;
+    border-radius: 5px;
+    margin: 3px 10px 15px 10px;
+    height: 72px;
+    width: 63px;
+    cursor :pointer;
+    box-shadow: 0px 0px 15px  rgba(0,0,0,0.3) inset, 0px 3px 10px rgba(0,0,0,0.5);
+}
+
+.radio-toolbar input[type="radio"]:checked + label { 
+    background-color:#bbb;
+    box-shadow: 0px 0px 15px  rgba(0,0,0,0.5) inset, 0px 3px 10px rgba(0,0,0,0);
+    /*fill: green; */
+}
+
+
+.returnHome{
+    display:inline-block;
+    padding:0;
+    cursor :pointer;
+    /*text-align : center;*/
+    width:75px;
+    height:75px;
+    position:absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 200;
+}
+
+#panel {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -180px;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+}
+
+#directions-panel {
+    background-color: #fff;
+    height: 85%;
+    width: 37%;
+    display: inline;
+    overflow: auto;
+    position: absolute;
+    top: 71px;
+    left: 12%;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px #aaa inset;
+    padding: 5px;
+}
+
+.hideMe{
+    display:none;
+}
+
+label img{
+    width: 60px;
+    height: 63px;
+}
+
+
+
+#emailModal{
+    background-color: #fff;
+    height: 55%;
+    width: 43%;
+    display: inline;
+    /* overflow: auto; */
+    position: absolute;
+    bottom: 190px;
+    right: 254px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px #aaa inset;
+    /*display:none; */
+    padding: 5px;
+    z-index: 700;
+}
+
+/* animations */
+
+
+.animatable.ng-hide-add,
+.animatable.ng-hide-remove {
+    display:block!important;
+}
+
+.animatable.ng-hide-add.ng-hide-add-active,
+.animatable.ng-hide-remove.ng-hide-remove-active {
+    -webkit-transition:all linear 2.5s;
+    transition:all linear 2.5s;
+}
+
+.animatable.ng-hide {
+    opacity:0;
+}
+
+
+/*modal css */
+
+.mobDir{
+    padding: 10px;
+    height:100%;
+}
+
+.qrcodeFrame{
+    width: 200px !important;
+    height: 200px !important;
+    border:none;
+    position: relative;
+    margin:  0 auto;
+    display: block;
+}
+
+#usermail{
+    width: 340px;
+    /*height:1.2em;*/
+    font-size: 1.7em;
+    border-radius:20px;
+    border: 2px solid black;
+    padding: 0 15px;
+    outline:  none;
+}
+
+.blueBtn{
+    background-color: blue;
+    border-radius:10px;
+    color:white;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-top:  5px;
+    margin-bottom:  5px;
+    margin-left:  auto;
+    margin-right: 10px;
+    display: block;
+    text-align: right;
+}
+
+.greenBtn{
+    background-color: green;
+    border-radius:10px;
+    color:white;
+    font-size: 1.5em;
+    padding: 5px;
+    margin-top:  5px;
+    margin-bottom:  5px;
+    margin-left:  10px;
+    margin-right: auto;
+    display: block;
+    text-align: left;
+}
+
+.centerMe{
+    display:block;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+/*
+.lowered{
+    position:absolute;
+    
+    top: 0px;
+}
+*/
+#radio1 + label{
+    position:absolute;
+    top: 0px;
+    left: -509px;
+}
+
+#radio2 + label{
+    position:absolute;
+    top: 169px;
+    left: -509px;
+}
+
+#radio3 + label{
+    position:absolute;
+    top: 85px;
+    left: -509px;
+}
+
+#radio4 + label{
+    position:absolute;
+    top: 253px;
+    left: -509px;
+}
+
+#resetme{
+    position:absolute;
+    top: 425px;
+    left: -509px;
+}
+
+#emailme{
+    position:absolute;
+    top: 339px;
+    left: -509px;
+}
+
+#radio1:checked + label{
+    position:absolute;
+    top: 2px;
+}
+
+#radio2:checked + label{
+    position:absolute;
+    top: 169px;
+}
+
+#radio3:checked + label{
+    position:absolute;
+    top: 97px;
+}
+
+#radio4:checked + label{
+    position:absolute;
+    top: 253px;
+}                        
+
+input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+}
+
+.buildingButton.ng-hide-add,
+.buildingButton.ng-hide-remove {
+    -webkit-transition: 1s linear all;
+    transition: 1s linear all;
+    -webkit-transform: translateX(0);
+    display: block!important;
+    opacity: 1;   
+}
+
+.buildingButton.ng-hide {
+    -webkit-transform: translateX(700px);
+}
+
+.hoodButton.ng-hide-add,
+.hoodButton.ng-hide-remove {
+    -webkit-transition: 1s linear all;
+    transition: 1s linear all;
+    -webkit-transform: translateX(0);
+    display: block!important;
+    opacity: 1;   
+}
+.hoodButton.ng-hide {
+    -webkit-transform: translateX(-700px);
+    opacity: 1;
+}
+
+.greyBackground {
     width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+    z-index: 500;
+    position: absolute;
+    top: 0;
+}  
+
+.searchAnimation.ng-enter-stagger {
+    /* 200ms will be applied between each sucessive enter operation */ 
+    -webkit-transition-delay:0.1s;
+    transition-delay:0.1s;
+
+    /* this is here to avoid accidental CSS inheritance */
+    -webkit-transition-duration: 0;
+    transition-duration: 0;
+}
+
+.searchAnimation.ng-enter {
+    -webkit-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    opacity: 0;
+    line-height: 0;
+}
+
+.searchAnimation.ng-enter.ng-enter-active {
+    opacity: 1;
+    transition: 0.2s linear all;
 }
